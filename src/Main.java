@@ -7,7 +7,6 @@ public class Main {
         Weapon warriorWeapon = warriorFactory.createWeapon();
         Clothes warriorArmor = warriorFactory.createClothes();
 
-        System.out.println("Creating Warrior character and equipment:");
         warrior.displayInfo();
         warriorWeapon.displayInfo();
         warriorArmor.displayInfo();
@@ -17,7 +16,6 @@ public class Main {
         Weapon mageWeapon = mageFactory.createWeapon();
         Clothes mageArmor = mageFactory.createClothes();
 
-        System.out.println("\nCreating Mage character and equipment:");
         mage.displayInfo();
         mageWeapon.displayInfo();
         mageArmor.displayInfo();
