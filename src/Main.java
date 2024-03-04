@@ -2,22 +2,19 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        CharacterFactory warriorFactory = new WarriorFactory();
-        Character warrior = warriorFactory.createCharacter();
-        Weapon warriorWeapon = warriorFactory.createWeapon();
-        Clothes warriorArmor = warriorFactory.createClothes();
+        CharacterFactory characterFactory;
 
-        warrior.displayInfo();
-        warriorWeapon.displayInfo();
-        warriorArmor.displayInfo();
+        // String character = "Warrior";
+        String character = "Mage";
 
-        CharacterFactory mageFactory = new MageFactory();
-        Character mage = mageFactory.createCharacter();
-        Weapon mageWeapon = mageFactory.createWeapon();
-        Clothes mageArmor = mageFactory.createClothes();
+        if (character.equals("Warrior")) {
+            characterFactory = new WarriorFactory();
+        }
+        else {
+            characterFactory = new MageFactory();
+        }
 
-        mage.displayInfo();
-        mageWeapon.displayInfo();
-        mageArmor.displayInfo();
+        CharacterCreator c = new CharacterCreator(characterFactory);
+        c.displayInfo();
     }
 }
